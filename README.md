@@ -1,9 +1,10 @@
 # Uno Skia Win32 — `FileOpenPicker` hangs when `Main` returns `Task`
 
-Minimal repro for an Uno Platform Skia Desktop (Win32) bug on Windows:
+Minimal repro for [unoplatform/uno#23070](https://github.com/unoplatform/uno/issues/23070):
 `FileOpenPicker.PickMultipleFilesAsync()` silently hangs inside
-`IFileOpenDialog.Show()` when `Program.Main` returns `Task` (async or not).
-No dialog is ever rendered; the app becomes unresponsive.
+`IFileOpenDialog.Show()` on Uno Skia Desktop (Win32) when `Program.Main`
+returns `Task` (async or not). No dialog is ever rendered; the app becomes
+unresponsive.
 
 ## Environment
 
